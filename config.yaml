@@ -1,0 +1,21 @@
+# Docker Management Configuration
+
+general:
+  backup_dir: /path/to/backup
+  run_scripts_dir: /path/to/run_scripts
+  log_dir: /path/to/logs
+  update_tracker: /path/to/update_tracker.txt
+
+containers:
+  plex:
+    container_name: plex
+    pull_location: docker.io/library/plex
+    backup_subdirs:
+      - movies
+      - config
+  sonarr:
+    container_name: sonarr
+    pull_location: linuxserver/sonarr
+    backup_subdirs:
+      - shows
+      - configs
